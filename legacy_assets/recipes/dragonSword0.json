@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group" : "sword",
+  "pattern": [
+    "A",
+    "A",
+    "X"
+  ],
+  "key": {
+    "A": {
+      "item": "tlsywen:dragon_gem"
+    },
+    "X" : {
+      "item" : "minecraft:dragon_egg"
+    }
+
+  },
+  "result": {
+    "item": "tlsywen:dragon_sword0"
+  }
+}
