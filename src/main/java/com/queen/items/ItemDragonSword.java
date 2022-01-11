@@ -71,14 +71,6 @@ public class ItemDragonSword extends SwordItem {
      public Multimap<EntityAttribute, EntityAttributeModifier> getAttributeModifiers(EquipmentSlot slot) {
          // override to use my attrib modifier multimap. 
         return slot == EquipmentSlot.MAINHAND ? this.attributeModifiersOverride : super.getAttributeModifiers(slot);
-     }
-
-     public boolean hasGlint(ItemStack stack) {
-         // give all swords the enchanted glint regardless of enchantment status
-         // looks pretty but creates a loss of info for the player because these can be enchanted?
-         // TODO decide if this should be removed for visual clarity.
-        return true;
-     }
-    
+     }    
     
 }

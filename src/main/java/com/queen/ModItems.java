@@ -10,8 +10,7 @@ import net.minecraft.util.registry.Registry;
 
 public class ModItems {
 
-    //public static final ItemGroup MOD_ITEM_GROUP = FabricItemGroupBuilder.create(new Identifier("modid", "moditems")).icon(() -> new ItemStack(Items.DRAGON_EGG)).build();
-    
+    // Tool Materials
     public static final ToolMaterial TOOL_DRAGON_LV1 = new DragonToolMaterial(800);
     public static final ToolMaterial TOOL_DRAGON_LV2 = new DragonToolMaterial(1600);
     public static final ToolMaterial TOOL_DRAGON_LV3 = new DragonToolMaterial(3200);
@@ -24,6 +23,7 @@ public class ModItems {
     public static final ToolMaterial TOOL_DRAGON_LV10 = new DragonToolMaterial(409600);
     public static final ToolMaterial TOOL_DRAGON_LVAWESOME = new DragonToolMaterial(Integer.MAX_VALUE-10); // need to reduce to prevent overflow
 
+    // Swords
     public static final Item DRAGON_SWORD_LV1 = new ItemDragonSword(TOOL_DRAGON_LV1, false);
     public static final Item DRAGON_SWORD_LV2 = new ItemDragonSword(TOOL_DRAGON_LV2, false);
     public static final Item DRAGON_SWORD_LV3 = new ItemDragonSword(TOOL_DRAGON_LV3, false);
@@ -37,18 +37,24 @@ public class ModItems {
 
     public static final Item DRAGON_SWORD_LVAWESOME = new ItemDragonSword(TOOL_DRAGON_LVAWESOME,true);
 
-    public static void register(){        
-        Registry.register(Registry.ITEM, new Identifier(LastSword.MODID, "dragon_sword_lv1"), DRAGON_SWORD_LV1);
-        Registry.register(Registry.ITEM, new Identifier(LastSword.MODID, "dragon_sword_lv2"), DRAGON_SWORD_LV2);
-        Registry.register(Registry.ITEM, new Identifier(LastSword.MODID, "dragon_sword_lv3"), DRAGON_SWORD_LV3);
-        Registry.register(Registry.ITEM, new Identifier(LastSword.MODID, "dragon_sword_lv4"), DRAGON_SWORD_LV4);
-        Registry.register(Registry.ITEM, new Identifier(LastSword.MODID, "dragon_sword_lv5"), DRAGON_SWORD_LV5);
-        Registry.register(Registry.ITEM, new Identifier(LastSword.MODID, "dragon_sword_lv6"), DRAGON_SWORD_LV6);
-        Registry.register(Registry.ITEM, new Identifier(LastSword.MODID, "dragon_sword_lv7"), DRAGON_SWORD_LV7);
-        Registry.register(Registry.ITEM, new Identifier(LastSword.MODID, "dragon_sword_lv8"), DRAGON_SWORD_LV8);
-        Registry.register(Registry.ITEM, new Identifier(LastSword.MODID, "dragon_sword_lv9"), DRAGON_SWORD_LV9);
-        Registry.register(Registry.ITEM, new Identifier(LastSword.MODID, "dragon_sword_lv10"), DRAGON_SWORD_LV10);
-        Registry.register(Registry.ITEM, new Identifier(LastSword.MODID, "dragon_sword_lv_awesome"), DRAGON_SWORD_LVAWESOME);
+
+    public static void register(){
+        register_item("dragon_sword_lv1", DRAGON_SWORD_LV1);
+        register_item("dragon_sword_lv2", DRAGON_SWORD_LV2);
+        register_item("dragon_sword_lv3", DRAGON_SWORD_LV3);
+        register_item("dragon_sword_lv4", DRAGON_SWORD_LV4);
+        register_item("dragon_sword_lv5", DRAGON_SWORD_LV5);
+        register_item("dragon_sword_lv6", DRAGON_SWORD_LV6);
+        register_item("dragon_sword_lv7", DRAGON_SWORD_LV7);
+        register_item("dragon_sword_lv8", DRAGON_SWORD_LV8);
+        register_item("dragon_sword_lv9", DRAGON_SWORD_LV9);
+        register_item("dragon_sword_lv10", DRAGON_SWORD_LV10);
+        register_item("dragon_sword_lv_awesome", DRAGON_SWORD_LVAWESOME);
+    }
+
+    private static void register_item(String itemID, Item item){
+        // a helper method since there's a lot of repitition
+        Registry.register(Registry.ITEM, new Identifier(LastSword.MODID, itemID), item);
     }
     
 }

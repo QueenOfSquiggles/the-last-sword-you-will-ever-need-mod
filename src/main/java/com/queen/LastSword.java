@@ -9,10 +9,10 @@ public class LastSword implements ModInitializer {
 
 	public static final Logger LOGGER = LogManager.getLogger("tlsywen");
 
-	public static final String MODID = "tlsywen";
+	public static final String MODID = "tlsywen"; // use modid for namespaces. IDK if this is like Forge where that's required or not
 
 	@Override
 	public void onInitialize() {
-		ModItems.register();
+		ModItems.register(); // just call the mod items register method
 	}
 }
