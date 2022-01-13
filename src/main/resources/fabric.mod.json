@@ -31,5 +31,8 @@
   },
   "suggests": {
     "another-mod": "*"
-  }
+  },
+  "mixins" : [
+    "tlsywen.mixins.json"
+  ]
 }

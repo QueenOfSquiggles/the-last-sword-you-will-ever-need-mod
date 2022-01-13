@@ -24,7 +24,7 @@ public class DragonToolMaterial implements ToolMaterial {
 
     @Override
     public int getEnchantability() {
-        return 30;
+        return 20;
     }
 
     @Override

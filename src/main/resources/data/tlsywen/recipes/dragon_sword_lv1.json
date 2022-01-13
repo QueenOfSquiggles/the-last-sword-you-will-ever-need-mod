@@ -1,0 +1,21 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "G",
+      "G",
+      "E"
+    ],
+    "key": {
+      "G": {
+        "item": "tlsywen:dragon_gem"
+      },
+      "E": {
+        "item": "minecraft:dragon_egg"
+      }
+    },
+    "result": {
+      "item": "tlsywen:dragon_sword_lv1",
+      "count": 1
+    }
+  }
+

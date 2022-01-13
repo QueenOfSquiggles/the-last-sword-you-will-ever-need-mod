@@ -1,3 +1,5 @@
+
+
 plugins {
 	id 'fabric-loom' version '0.10-SNAPSHOT'
 	id 'maven-publish'
@@ -9,6 +11,11 @@ targetCompatibility = JavaVersion.VERSION_17
 archivesBaseName = project.archives_base_name
 version = project.mod_version
 group = project.maven_group
+
+remapJar {
+	// changes the name of the output file to anything I want
+   archiveFileName = "${archivesBaseName}_forMC_${project.minecraft_version}_v${project.version}.jar"
+}
 
 repositories {
 	// Add repositories to retrieve artifacts from in here.

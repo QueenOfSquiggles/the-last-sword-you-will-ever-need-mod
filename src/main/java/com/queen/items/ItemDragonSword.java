@@ -17,6 +17,8 @@ import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.SwordItem;
 import net.minecraft.item.ToolMaterial;
+import net.minecraft.predicate.entity.DamageSourcePredicate;
+import net.minecraft.predicate.entity.EntityPredicate;
 
 public class ItemDragonSword extends SwordItem {
 
@@ -47,7 +49,11 @@ public class ItemDragonSword extends SwordItem {
 
     public float getMiningSpeedMultiplier(ItemStack stack, BlockState state) {
         // magic constant. I don't like it but alternative is a private static final var which doesn't look much better?  
-        return 15.0f;
+        float hardness = state.getBlock().getHardness();
+
+        // netherite speed is 9.0.
+        // if we use a factor relating to the block hardness, can we make a constant break speed?
+        return 15.0f * hardness; // stone hardness = 1.5, so here we would do (15*1.5) = 22.5 speed
     }
   
     @Override
@@ -59,7 +65,15 @@ public class ItemDragonSword extends SwordItem {
     public boolean postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
         // get's called after a living entity is hit with this item?
         // So this should work also if given to a zombie??? <-- that's bad news for player
-        if(forceKill) target.kill(); // if this sword forces death, automatically kill the entity, regardless of health remaining
+        if(forceKill){
+            // if this sword forces death, automatically kill the entity, regardless of health remaining
+            float health = target.getMaxHealth();
+            target.damage(DamageSource.mob(attacker), health);
+        } 
+
+
+
+
         return false;
     }
 

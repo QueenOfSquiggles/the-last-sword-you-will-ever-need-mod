@@ -3,7 +3,9 @@ package com.queen;
 import com.queen.items.ItemDragonSword;
 import com.queen.tool_materials.DragonToolMaterial;
 
+import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
@@ -38,7 +40,14 @@ public class ModItems {
     public static final Item DRAGON_SWORD_LVAWESOME = new ItemDragonSword(TOOL_DRAGON_LVAWESOME,true);
 
 
+    // Recipe Items
+    public static final Item DRAGON_CRYSTAL = new Item(new FabricItemSettings().group(ItemGroup.MATERIALS));
+    public static final Item DRAGON_GEM = new Item(new FabricItemSettings().group(ItemGroup.MATERIALS));
+
     public static void register(){
+        register_item("dragon_crystal", DRAGON_CRYSTAL);
+        register_item("dragon_gem", DRAGON_GEM);
+
         register_item("dragon_sword_lv1", DRAGON_SWORD_LV1);
         register_item("dragon_sword_lv2", DRAGON_SWORD_LV2);
         register_item("dragon_sword_lv3", DRAGON_SWORD_LV3);

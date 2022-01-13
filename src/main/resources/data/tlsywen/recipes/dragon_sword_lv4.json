@@ -1,0 +1,21 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "GGG",
+      "GXG",
+      "GGG"
+    ],
+    "key": {
+      "G": {
+        "item": "tlsywen:dragon_gem"
+      },
+      "X": {
+        "item": "tlsywen:dragon_sword_lv3"
+      }
+    },
+    "result": {
+      "item": "tlsywen:dragon_sword_lv4",
+      "count": 1
+    }
+  }
+
