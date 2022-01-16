@@ -9,7 +9,6 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import net.fabricmc.api.ModInitializer;
-import net.minecraft.client.util.math.Vector2f;
 
 public class LastSword implements ModInitializer {
 	

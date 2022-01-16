@@ -2,8 +2,6 @@ package com.queen.utils;
 
 import java.util.Random;
 
-import net.minecraft.client.util.math.Vector2f;
-
 /**
  *  A single class to manage the drop rates. For now these variables are static, but I want to make them configurable later on
  * Such that modpack makers or tech savvy users can customize how this mod interacts with the world

@@ -1,6 +1,5 @@
 package com.queen.utils;
 
-import com.queen.LastSword;
 import com.queen.ModItems;
 
 import net.fabricmc.fabric.api.loot.v1.FabricLootPoolBuilder;
@@ -47,9 +46,9 @@ public class LootTableInjection {
         addLoot(WITHER_LOOT, uniform(7.0f, 10.0f), ModItems.DRAGON_CRYSTAL);
         
         // Chance of crystals
-        addLoot(END_STONE_LOOT, binomial(1, 0.125f), ModItems.DRAGON_CRYSTAL);
-        addLoot(ENDERMAN_LOOT, binomial(2, 0.125f), ModItems.DRAGON_CRYSTAL); // enderman can be farmed. Maybe should this just be removed?
-        // maybe allowing enderman farms would let the player generate a near infinite amount of crystals. Which could be a cool reward
+        addLoot(END_STONE_LOOT, binomial(1, 0.01f), ModItems.DRAGON_CRYSTAL);
+        addLoot(ENDERMAN_LOOT, binomial(2, 0.025f), ModItems.DRAGON_CRYSTAL); // enderman can be farmed. Maybe should this just be removed?
+        // maybe allowing enderman farms would let the player generate a near infinite amount of crystals. Which could be a cool reward 
         addLoot(PIGLIN_BARTER_LOOT, binomial(1, 0.01f), ModItems.DRAGON_CRYSTAL); // I have no clue how common/uncommon this will be. If I did this right, it should be as rare as enchanted books
         addLoot(FISHING_TREASURE_LOOT, binomial(1, 0.167f), ModItems.DRAGON_CRYSTAL); // this is effectively a novelty. This 17% chance is composited by the 5% chance of getting treasure from fishing. It would be super cool to see, but not very likely at all.
     }
