@@ -1,0 +1,15 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "gradlew client",
+            "type": "shell",
+            "command": "./gradlew runClient"
+        },
+        {
+            "label": "gradlew server",
+            "type": "shell",
+            "command": "./gradlew runServer"
+        }        
+    ]
+}
