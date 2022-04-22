@@ -1,0 +1,18 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "C C",
+      "CCC",
+      "CCC"
+    ],
+    "key": {
+      "C": {
+        "item": "tlsywen:dragon_gem"
+      }
+    },
+    "result": {
+      "item": "tlsywen:dragon_armour_chestplate",
+      "count": 1
+    }
+  }
+

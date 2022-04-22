@@ -1,9 +1,13 @@
 package com.queen;
 
+import com.queen.armour.DragonArmourMaterial;
 import com.queen.items.ItemDragonSword;
 import com.queen.tool_materials.DragonToolMaterial;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
+import net.minecraft.entity.EquipmentSlot;
+import net.minecraft.item.ArmorItem;
+import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ToolMaterial;
@@ -39,6 +43,14 @@ public class ModItems {
 
     public static final Item DRAGON_SWORD_LVAWESOME = new ItemDragonSword(TOOL_DRAGON_LVAWESOME,true);
 
+    // Armour
+    public static final ArmorMaterial DRAGON_ARMOUR = new DragonArmourMaterial();
+
+    public static final Item DRAGON_ARMOUR_HELM = new ArmorItem(DRAGON_ARMOUR, EquipmentSlot.HEAD, new Item.Settings().group(ItemGroup.COMBAT));
+    public static final Item DRAGON_ARMOUR_CHESTPLATE = new ArmorItem(DRAGON_ARMOUR, EquipmentSlot.CHEST, new Item.Settings().group(ItemGroup.COMBAT));
+    public static final Item DRAGON_ARMOUR_LEGGINGS = new ArmorItem(DRAGON_ARMOUR, EquipmentSlot.LEGS, new Item.Settings().group(ItemGroup.COMBAT));
+    public static final Item DRAGON_ARMOUR_BOOTS = new ArmorItem(DRAGON_ARMOUR, EquipmentSlot.FEET, new Item.Settings().group(ItemGroup.COMBAT));
+
 
     // Recipe Items
     public static final Item DRAGON_CRYSTAL = new Item(new FabricItemSettings().group(ItemGroup.MATERIALS));
@@ -59,6 +71,11 @@ public class ModItems {
         register_item("dragon_sword_lv9", DRAGON_SWORD_LV9);
         register_item("dragon_sword_lv10", DRAGON_SWORD_LV10);
         register_item("dragon_sword_lv_awesome", DRAGON_SWORD_LVAWESOME);
+
+        register_item("dragon_armour_helm", DRAGON_ARMOUR_HELM);
+        register_item("dragon_armour_chestplate", DRAGON_ARMOUR_CHESTPLATE);
+        register_item("dragon_armour_leggings", DRAGON_ARMOUR_LEGGINGS);
+        register_item("dragon_armour_boots", DRAGON_ARMOUR_BOOTS);
     }
 
     private static void register_item(String itemID, Item item){

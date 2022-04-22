@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "C C",
+      "C C"
+    ],
+    "key": {
+      "C": {
+        "item": "tlsywen:dragon_gem"
+      }
+    },
+    "result": {
+      "item": "tlsywen:dragon_armour_boots",
+      "count": 1
+    }
+  }
+
