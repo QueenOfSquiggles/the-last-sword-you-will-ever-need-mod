@@ -34,6 +34,7 @@ public class LootTableInjection {
     private static final Identifier END_TOWER_CHEST_LOOT = new Identifier("minecraft", "chests/end_city_treasure");
     private static final Identifier ELDER_GUARDIAN_LOOT = new Identifier("minecraft", "entities/elder_guardian");
     private static final Identifier WITHER_LOOT = new Identifier("minecraft", "entities/wither");
+    private static final Identifier END_DRAGON_LOOT = new Identifier("minecraft", "entities/ender_dragon");
     private static final Identifier ENDERMAN_LOOT = new Identifier("minecraft", "entities/enderman");
     private static final Identifier END_STONE_LOOT = Blocks.END_STONE.getLootTableId(); // blocks have this built in
     private static final Identifier PIGLIN_BARTER_LOOT = new Identifier("minecraft", "gameplay/piglin_bartering");
@@ -42,8 +43,10 @@ public class LootTableInjection {
     public static void registerInjections() {
         // Guaranteed Crystals
         addLoot(END_TOWER_CHEST_LOOT, uniform(7.0f, 10.0f), ModItems.DRAGON_CRYSTAL);
+        addLoot(END_TOWER_CHEST_LOOT, binomial(2, 0.01f), ModItems.DRAGON_CRYSTAL);
         addLoot(ELDER_GUARDIAN_LOOT, uniform(7.0f, 10.0f), ModItems.DRAGON_CRYSTAL);
         addLoot(WITHER_LOOT, uniform(7.0f, 10.0f), ModItems.DRAGON_CRYSTAL);
+        addLoot(END_DRAGON_LOOT, uniform(2.0f, 5.0f), ModItems.DRAGON_CRYSTAL); // this is additional to the event injection which gives to all players on death. Race to grab the extra!
         
         // Chance of crystals
         addLoot(END_STONE_LOOT, binomial(1, 0.01f), ModItems.DRAGON_CRYSTAL);

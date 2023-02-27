@@ -1,6 +1,7 @@
 package com.queen;
 
 import com.queen.armour.DragonArmourMaterial;
+import com.queen.items.ItemDragonArmour;
 import com.queen.items.ItemDragonSword;
 import com.queen.tool_materials.DragonToolMaterial;
 
@@ -46,10 +47,10 @@ public class ModItems {
     // Armour
     public static final ArmorMaterial DRAGON_ARMOUR = new DragonArmourMaterial();
 
-    public static final Item DRAGON_ARMOUR_HELM = new ArmorItem(DRAGON_ARMOUR, EquipmentSlot.HEAD, new Item.Settings().group(ItemGroup.COMBAT));
-    public static final Item DRAGON_ARMOUR_CHESTPLATE = new ArmorItem(DRAGON_ARMOUR, EquipmentSlot.CHEST, new Item.Settings().group(ItemGroup.COMBAT));
-    public static final Item DRAGON_ARMOUR_LEGGINGS = new ArmorItem(DRAGON_ARMOUR, EquipmentSlot.LEGS, new Item.Settings().group(ItemGroup.COMBAT));
-    public static final Item DRAGON_ARMOUR_BOOTS = new ArmorItem(DRAGON_ARMOUR, EquipmentSlot.FEET, new Item.Settings().group(ItemGroup.COMBAT));
+    public static final Item DRAGON_ARMOUR_HELM = new ItemDragonArmour(DRAGON_ARMOUR, EquipmentSlot.HEAD, new Item.Settings().group(ItemGroup.COMBAT));
+    public static final Item DRAGON_ARMOUR_CHESTPLATE = new ItemDragonArmour(DRAGON_ARMOUR, EquipmentSlot.CHEST, new Item.Settings().group(ItemGroup.COMBAT));
+    public static final Item DRAGON_ARMOUR_LEGGINGS = new ItemDragonArmour(DRAGON_ARMOUR, EquipmentSlot.LEGS, new Item.Settings().group(ItemGroup.COMBAT));
+    public static final Item DRAGON_ARMOUR_BOOTS = new ItemDragonArmour(DRAGON_ARMOUR, EquipmentSlot.FEET, new Item.Settings().group(ItemGroup.COMBAT));
 
 
     // Recipe Items

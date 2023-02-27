@@ -1,5 +1,7 @@
 package com.queen.tool_materials;
 
+import com.queen.ModItems;
+
 import net.minecraft.item.Items;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
@@ -39,7 +41,7 @@ public class DragonToolMaterial implements ToolMaterial {
 
     @Override
     public Ingredient getRepairIngredient() {
-        return Ingredient.ofItems(Items.NETHERITE_INGOT);
+        return Ingredient.ofItems(ModItems.DRAGON_GEM);
     }
     
 }

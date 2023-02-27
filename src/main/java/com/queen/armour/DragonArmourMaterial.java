@@ -54,5 +54,5 @@ public class DragonArmourMaterial implements ArmorMaterial {
     public float getToughness() {
         return 0.5f;
     }
-    
+
 }
