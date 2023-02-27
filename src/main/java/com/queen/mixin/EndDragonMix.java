@@ -45,7 +45,8 @@ public class EndDragonMix {
             // the shadowed boolean should match the source files "dragonKilled" var
             // this method call is valid because dragonKilled = true?
 
-            World world = dragon.getWorld();
+            
+            World world = dragon.world;
             if (!world.isClient){
                 LastSword.LOGGER.info("Dragon Killed & Valid :D. Giving out loot");
                 List<? extends PlayerEntity> worldPlayers = world.getPlayers();
