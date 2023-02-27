@@ -12,6 +12,11 @@
     "item.tlsywen.dragon_sword_lv_awesome" : "The Last Sword You Will Ever Need",
 
     "item.tlsywen.dragon_crystal" : "Draconic Crystal",
-    "item.tlsywen.dragon_gem" : "Draconic Gem"
+    "item.tlsywen.dragon_gem" : "Draconic Gem",
+    "item.tlsywen.dragon_armour_helm" : "Dragonic Helm",
+    "item.tlsywen.dragon_armour_chestplate" : "Dragonic Chestplate",
+    "item.tlsywen.dragon_armour_leggings" : "Dragonic Leggings",
+    "item.tlsywen.dragon_armour_boots" : "Dragonic Boots"
+
 
 }
