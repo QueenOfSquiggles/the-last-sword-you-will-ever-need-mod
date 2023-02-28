@@ -1,8 +1,5 @@
 package com.queen;
 
-import java.util.Random;
-
-import com.queen.utils.DropMetrics;
 import com.queen.utils.LootTableInjection;
 
 import org.apache.logging.log4j.LogManager;

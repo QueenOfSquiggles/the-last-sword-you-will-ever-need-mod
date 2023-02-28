@@ -10,7 +10,7 @@ public class ItemDragonArmour extends ArmorItem {
         super(material, slot, settings);
     }
 
-    // TODO add custom effects for a fully equipped armour set
+    // add custom effects for a fully equipped armour set
     //      Also a subsection of that set should be available for each level.
     //      Min/Maxxers are going to need a good reason to choose against elytra in some versions
 

@@ -2,7 +2,6 @@ package com.queen.tool_materials;
 
 import com.queen.ModItems;
 
-import net.minecraft.item.Items;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
 
